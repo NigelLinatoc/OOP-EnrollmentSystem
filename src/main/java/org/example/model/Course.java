@@ -1,38 +1,48 @@
-package org.example;
+package org.example.model;
 
 public class Course {
-    private String courseID;
+    private int courseID;
     private String courseName;
     private String program;
 
     public Course(){
 
     }
+    public Course(int CourseID){
 
-    public Course(String courseID, String courseName, String program){
+        this.courseID = CourseID;
+    }
+
+    public Course(int courseID, String courseName, String program){
         this.courseID = courseID;
         this.courseName = courseName;
         this.program = program;
     }
 
-    public String getCourseID(){
+    public int getCourseID(){
+
         return courseID;
     }
 
-    public void setCourseID(String courseID){
+    public void setCourseID(int courseID){
+
         this.courseID = courseID;
     }
     public String getCourseName(){
+
         return courseName;
     }
 
     public void setCourseName(String courseName){
+
         this.courseName = courseName;
     }
     public String getProgram(){
+
         return program;
     }
     public void setProgram(String program){
+
         this.program = program;
     }
     public void display(){
@@ -40,5 +50,14 @@ public class Course {
         System.out.println("Course Name: " + getCourseName());
         System.out.println("Program: " + getProgram());
         System.out.println("");
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "courseID='" + courseID + '\'' +
+                ", courseName='" + courseName + '\'' +
+                ", program='" + program + '\'' +
+                '}';
     }
 }

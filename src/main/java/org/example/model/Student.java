@@ -1,34 +1,42 @@
-package org.example;
+package org.example.model;
 
 public class Student {
 
-    private String studentID;
+    private int studentID;
     private String studentName;
     private String program;
 
     public Student(){
 
     }
-    public Student(String studentID, String studentName, String program){
+    public Student(int studentID){
+
+        this.studentID = studentID;
+    }
+    public Student(int studentID, String studentName, String program){
         this.studentID = studentID;
         this.studentName = studentName;
         this.program = program;
     }
-    public String getID(){
+    public int getID(){
         return studentID;
     }
 
-    public void setID(String studentID){
+    public void setID(int studentID){
+
         this.studentID = studentID;
     }
     public String getName(){
+
         return studentName;
     }
 
     public void setName(String studentName){
+
         this.studentName = studentName;
     }
     public String getProgram(){
+
         return program;
     }
     public void setProgram(String program){
@@ -40,5 +48,14 @@ public class Student {
         System.out.println("Student Name: " + getName());
         System.out.println("Program: " + getProgram());
         System.out.println("");
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentID=" + studentID +
+                ", studentName='" + studentName + '\'' +
+                ", program='" + program + '\'' +
+                '}';
     }
 }
